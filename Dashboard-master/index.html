@@ -10,6 +10,14 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a55ca2877b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        Chart.defaults.global.responsive = true;
+
+    </script>
+
+
 </head>
 
 <body>
@@ -28,22 +36,32 @@
                         <i class="fas fa-bars align-self-md-end"></i>
                     </div>
                 </div>
-                <div class="col-4 "></div>
-                <div class="col-4 d-flex justify-content-end  " id="search">
-                    <input class="" type="search" value="Search for..." />
-                    <button class=" btn rounded-end" style="background-color: crimson;">   <i class="fas fa-search   align-self-baseline"></i>                    </button>
-                   
-                    <!-- <input type="button" src=""/> -->
-                    <button class="btn">
-                    <i class="fas fa-user align-self-baseline"></i>
-                    <i class="fas fa-sort-down align-self-baseline "></i>
-                    </button>
-                    </div>
+                <div class="col-4 ">
+                    <!--                     
+<div class="input-group ">
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-search   "></i></span>
+
+  </div> -->
                 </div>
-                <!-- Sidebar Toggle Icon-->
-                <!-- Navbar Search-->
-                <!-- User Profile-->
+
+                <div class="col-4 input-group-lg btn d-flex justify-content-end " id="search">
+
+                    <input class="" type="search" value="Search for..." />
+                    <span class="col-1 d-flex rounded-end justify-content-center " style="background-color: crimson;"
+                        id="inputGroup-sizing-default"><i class="fas fa-search  d-flex align-self-center "></i></span>
+
+                    <!-- <input type="button" src=""/> -->
+                    <button class="btn-group btn">
+                        <i class="fas fa-user align-self-baseline"></i>
+                        <i class="fas fa-sort-down align-self-baseline "></i>
+                    </button>
+                </div>
             </div>
+            <!-- Sidebar Toggle Icon-->
+            <!-- Navbar Search-->
+            <!-- User Profile-->
+        </div>
         </div>
     </nav>
 
@@ -66,30 +84,37 @@
                 <h6>Dashboard</h6>
             </div>
             <!-- Reports Cards -->
-            <div class="row text-center ">
+
+            <div class="row  ">
                 <div class="col-sm-3">
                     <div class="card bg-danger text-white mb-3 " style="max-width: 22rem;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Sales</h5>
+                        <div class="card-body text-center">
+                            <h5 class="card-title ">Sales</h5>
                             <p class="card-text">999.999 SR</p>
                         </div>
-                        <div class="card-footer">
-                            <a class=" text-white"> view details</a>
-                            <i class="fas fa-chevron-right"></i>
+                        <div class="card-footer d-flex justify-content-between ">
+                            <div>
+                                <a class=" text-white"> view details</a>
+                            </div>
+                            <div class="mr-auto">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
 
 
                         </div>
                     </div>
+
+
                 </div>
                 <div class="col-sm-3">
                     <div class="card text-white bg-danger mb-3" style="max-width: 22rem;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Orders</h5>
+                        <div class="card-body text-center">
+                            <h5 class="card-title ">Orders</h5>
                             <p class="card-text">9999</p>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer d-flex justify-content-between ">
                             <a class=" text-white"> view details</a>
-                            <i class="fas fa-chevron-right"></i>
+                            <div> <i class="fas fa-chevron-right"></i></div>
 
 
                         </div>
@@ -98,13 +123,13 @@
 
                 <div class="col-sm-3">
                     <div class="card text-white bg-danger mb-3" style="max-width: 22rem;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Visitors</h5>
+                        <div class="card-body text-center">
+                            <h5 class="card-title ">Visitors</h5>
                             <p class="card-text ">999</p>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer d-flex justify-content-between ">
                             <a class=" text-white"> view details</a>
-                            <i class="fas fa-chevron-right"></i>
+                            <div> <i class="fas fa-chevron-right"></i></div>
 
 
                         </div>
@@ -113,104 +138,285 @@
 
                 <div class="col-sm-3">
                     <div class="card text-white bg-danger mb-3" style="max-width: 22rem;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center " ">Convistion Rate</h5>
+                        <div class="card-body text-center">
+                            <h5 class="card-title  " ">Convistion Rate</h5>
                           <p class=" card-text">9.99%</p>
 
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer d-flex justify-content-between ">
                             <a class=" text-white"> view details</a>
-                            <i class="fas fa-chevron-right"></i>
+                            <div> <i class="fas fa-chevron-right"></i></div>
 
 
                         </div>
                     </div>
                 </div>
             </div>
-           
+
 
             <!-- Reports Chart -->
-         
+
             <div class="row mb-3">
                 <div class="col-6">
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-table"></i>
-                      Orders
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-table"></i>
+                            Orders
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <canvas id="myChart" width="400" height="200"></canvas>
+                                <script>
+
+
+                                    const ctx = document.getElementById('myChart').getContext('2d');
+                                    const myChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['Aug 1', 'Aug 3', 'Aug 5', 'Aug 7', 'Aug9', 'Aug 11'],
+                                            datasets: [{
+                                                data: [8000, 30000, 40000, 20000, 19000, 26000],
+                                                fill: {
+                                                    target: 'origin',
+                                                    above: 'rgb(0, 0, 0)',   // Area will be red above the origin
+                                                },
+                                                borderColor: [
+                                                    'rgba(255, 0, 0, 1)',
+                                                  
+                                                ],
+                                                borderWidth: 1
+                                            }]
+                                        },
+                                        options: {
+                                            scales: {
+                                                y: {
+                                                    beginAtZero: true
+                                                }
+                                            }
+                                        }
+                                    });
+                                </script>
+                            </blockquote>
+                        </div>
                     </div>
-                    <div class="card-body">
-                      <blockquote class="blockquote mb-0">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                      </blockquote>
-                    </div>
-                  </div>
                 </div>
 
 
                 <div class="col-6">
-                  <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-eye"></i>
-                      Visitors
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-eye"></i>
+                            Visitors
+                        </div>
+                        <div class="card-body">
+                            <canvas id="myChart2" width="400" height="200"></canvas>
+                            <script>
+
+
+                                const ctx2 = document.getElementById('myChart2').getContext('2d');
+                                const myChart2 = new Chart(ctx2, {
+                                    type: 'bar',
+                                    data: {
+                                        labels: ['Aug 1', 'Aug 3', 'Aug 5', 'Aug 7', 'Aug9', 'Aug 11'],
+                                        datasets: [{
+                                            label: 'men',
+                                            data: [8000, 30000, 40000, 20000, 19000, 26000],
+                                            fill: {
+                                                target: 'origin',
+                                                above: 'rgb(0, 0, 0,1)',   // Area will be red above the origin
+                                                below: 'rgb(0, 0, 0,1)'    // And blue below the origin
+                                            },
+                                            backgroundColor: 'rgb(0,0,0,1)',
+                                            borderColor: [
+                                                'rgba(0, 0, 0, 0)',
+                                               
+                                            ],
+                                            borderWidth: 1
+                                        },{
+                                            label: 'women',
+                                            data: [8000, 30000, 40000, 20000, 19000, 26000],
+                                            fill: {
+                                                target: 'origin',
+                                                above: 'rgb(255, 0, 1)',   // Area will be red above the origin
+                                                below: 'rgb(255, 0, 1)'    // And blue below the origin
+                                            },
+                                            backgroundColor: ['rgb(255,0,0,1)'],
+                                            borderColor: [
+                                                'rgba(255, 0, 0, 1)',
+                                               
+                                            ],
+                                            borderWidth: 1,
+                                            
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+                            </script>
+                            </blockquote>
+                        </div>
                     </div>
-                    <div class="card-body">
-                      <blockquote class="blockquote mb-0">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                      </blockquote>
-                    </div>
-                  </div>
-                  </div>
+                </div>
             </div>
 
             <div class="row">
                 <div class="col-6 mb-3">
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-lightbulb"></i>
-                                              Visitors Cities
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-lightbulb"></i>
+                            Visitors Cities
+                        </div>
+                        <div class="card-body row-cols-1">
+                            <canvas id="myChart3" width="400" height="100" ></canvas>
+
+                            <script>
+
+
+                                const ctx3 = document.getElementById('myChart3').getContext('2d');
+                               
+                                const myChart3 = new Chart(ctx3, {
+                                    type: 'pie',
+                                    data: {
+                                        labels: ['Mecca', 'Madina', 'Riyadh'],
+                                        datasets: [{
+                                            label: null,
+                                            data: [800, 200, 1000 ],
+                                            hoverOffset: 4,
+                                            fill: {
+                                                target: 'origin',
+                                                   // Area will be red above the origin
+                                            },
+                                            backgroundColor: ['#00F','#000','#f00'],
+                                            borderColor:[
+                                                'rgba(0, 0, 255, 1)',
+                                              
+                                            ],
+                                            borderWidth: 1,
+                                            
+                                        }],
+                                        options: {  
+    responsive: true,
+    maintainAspectRatio: false
+}
+                                    },
+                                
+                                });
+                            </script>
+                          
+                        </div>
                     </div>
-                    <div class="card-body">
-                      <blockquote class="blockquote mb-0">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                      </blockquote>
-                    </div>
-                  </div>
                 </div>
 
 
                 <div class="col-6">
-                  <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-star"></i>                      Costumers Rate
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-star"></i> Costumers Rate
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <canvas id="myChart4" width="400" height="200"></canvas>
+
+                                <script>
+    
+    
+                                    const ctx4 = document.getElementById('myChart4').getContext('2d');
+                                    const myChart4 = new Chart(ctx4, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['Aug 1', 'Aug 3', 'Aug 5', 'Aug 7', 'Aug9', 'Aug 11'],
+                                            datasets: [{
+                                                label: null,
+                                                data: [8000, 30000, 40000, 20000, 19000, 26000],
+                                                fill: {
+                                                    target: 'origin',
+                                                    above: 'rgb(0, 0, 0)',   // Area will be red above the origin
+                                                },
+                                                borderColor: [
+                                                    'rgba(255, 0, 0, 1)',
+                                                  
+                                                ],
+                                                borderWidth: 1
+                                            }]
+                                        },
+                                        options: {
+                                            scales: {
+                                                y: {
+                                                    beginAtZero: true
+                                                }
+                                            }
+                                        }
+                                    });
+                                </script>
+                            </blockquote>
+                        </div>
                     </div>
-                    <div class="card-body">
-                      <blockquote class="blockquote mb-0">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                      </blockquote>
-                    </div>
-                  </div>
-                  </div>
+                </div>
             </div>
-            <div class="col-12">
+
+            <!-- Customers Table -->
+            <div class="col-12  ">
                 <div class="card">
-                  <div class="card-header">
-                    <i class="fas fa-users"></i>                     Customers
-                  </div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>Name <button class="btn "><i class="fas fa-arrows-alt-v"></i></button></td>
-                                    <td>Adress <button class="btn "><i class="fas fa-arrows-alt-v"></i></button></td>
-                                    <td>City<button class="btn "><i class="fas fa-arrows-alt-v"></i></button></td>
-                                    <td>Age<button class="btn "><i class="fas fa-arrows-alt-v"></i></button></td>
-                                    <td>Last Visit<button class="btn "><i class="fas fa-arrows-alt-v"></i></button></td>
-                                    <td>Orders <button class="btn "><i class="fas fa-arrows-alt-v"></i></button></td>
+                    <div class="card-header">
+                        <i class="fas fa-users"></i> Customers
+                    </div>
+                    <div class="card-body  ">
+                        <div class="col-12 row gap-1">
+                            <div class="col-1   s">
+
+                                <select class=" form-select align-top" aria-label="Default select example">
+                                    <option value="1" selected>10</option>
+                                    <option value="2">20</option>
+                                    <option value="3">30</option>
+                                </select>
+
+                            </div>
+                            <div class="col-2   ">
+                                <h6 class="col-auto  ">enties per page </h6>
+                            </div>
+                            <div class="col-7"></div>
+                            <div class="col-1  " id="search">
+
+                                <input class="rounded" type="search" value="Search for..." />
+
+                            </div>
+
+                        </div>
+                        <div class="col-12 ">
+                            <table class="table border  " style="width: 100%;">
+                                <tbody class="">
+                                    <tr class="row  px-4" style="width:125% ;">
+                                        <th scope="col" style="width: 20%;" class="d-flex justify-content-between">
+                                            <div>Name</div>
+                                            <div><i class="fas fa-arrows-alt-v"></i></div>
+                                            </td>
+                                        <th scope="col" style="width: 30%;" class=" d-flex justify-content-between">
+                                            <div>Adress</div>
+                                            <div><i class="fas fa-arrows-alt-v"></i></div>
+                                            </td>
+                                        <th scope="col" style="width: 13%;" class=" d-flex justify-content-between">
+                                            <div>City</div>
+                                            <div><i class="fas fa-arrows-alt-v"></i></div>
+                                            </td>
+                                        <th scope="col" style="width: 10%;" class="  d-flex justify-content-between">
+                                            <div>Age</div>
+                                            <div><i class="fas fa-arrows-alt-v"></i></div>
+                                            </td>
+                                        <th scope="col" style="width: 13%;" class=" d-flex justify-content-between">
+                                            <div>Last Visit</div>
+                                            <div><i class="fas fa-arrows-alt-v"></i></div>
+                                            </td>
+                                        <th scope="col" style="width: 13%;"
+                                            class=" col-2 d-flex justify-content-between">
+                                            <div>Orders</div>
+                                            <div><i class="fas fa-arrows-alt-v"></i></div>
+                                            </td>
+
                                     </tr>
                                     <tr>
                                         <td>&nbsp;</td>
@@ -219,26 +425,117 @@
                                         <td>&nbsp;</td>
                                         <td>&nbsp;</td>
                                         <td>&nbsp;</td>
-                                        </tr>
-                            </tbody>
-                        </table>
-                    </blockquote>
-                  </div>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="row">
+                                <h6 class="col-2 "> 1 to 10 of 31 entries</h6>
+                                <div class="col-8"></div>
+                                <div class=" col-2 d-flex justify-content-center ">
+
+                                    <span class="btn btn-primary rounded-0 rounded-start ">1</span>
+                                    <span class="btn rounded-0 border text-primary">2</span>
+                                    <span class="btn border rounded-0 text-primary">3</span>
+                                    <span class="btn border rounded-0 text-primary">4</span>
+                                    <span class="btn border rounded-0 rounded-end text-primary">></span>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </div>
-          
-            <!-- Customers Table -->
+            </div>
+
+
         </main>
 
         <!-- Customers Table -->
-        <footer>
+        <footer class=" px-3 bg-light text-secondary"> Copyright @ nrt.sa 2021
         </footer>
     </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/charts.js"></script>
+
+    <script>
+        $(function () {/*from   w ww .  ja va2 s  . c o  m*/
+            var ctx = document.getElementById("layanan").getContext('2d');
+            var data = {
+                datasets: [{
+                    data: [10, 20, 30],
+                    backgroundColor: [
+                        '#3c8dbc',
+                        '#f56954',
+                        '#f39c12',
+                    ],
+                }],
+                labels: [
+                    'Request',
+                    'Layanan',
+                    'Problem'
+                ]
+            };
+            var myDoughnutChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: data,
+                options: {
+                    responsive: false,
+                    maintainAspectRatio: false,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12
+                        }
+                    }
+                }
+            });
+            var ctx_2 = document.getElementById("layanan_subbagian").getContext('2d');
+            var data_2 = {
+                datasets: [{
+                    data: [10, 20, 30],
+                    backgroundColor: [
+                        '#3c8dbc',
+                        '#f56954',
+                        '#f39c12',
+                    ],
+                }],
+                labels: [
+                    'Request',
+                    'Layanan',
+                    'Problem'
+                ]
+            };
+            var myDoughnutChart_2 = new Chart(ctx_2, {
+                type: 'doughnut',
+                data: data_2,
+                options: {
+                    responsive: false,
+                    maintainAspectRatio: false,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12
+                        }
+                    }
+                }
+            });
+        });
+
+    </script>
+    </head>
+
+    <body>
+        <div>
+            <canvas id="layanan" width="240px" height="240px"></canvas>
+        </div>
+        <div>
+            <canvas id="layanan_subbagian" width="240px" height="240px"></canvas>
+        </div>
+    </body>
+
 </body>
 
 </html>

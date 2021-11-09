@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a55ca2877b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        Chart.defaults.global.responsive = true;
+
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.style.marginLeft = "250px";
+            document.body.style.width = "85%";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.width = "100%";
+            document.body.style.marginLeft = "0px";
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <nav class="bg-purple">
+        <!-- Navbar Brand-->
+        <div class="p-2">
+
+            <div class="row">
+                <div class="col-2  d-flex justify-content-between align-items-center ">
+                    <h4 href="index.html" style="color: white;">Nrt Solution </h4>
+                    <button class="btn text-light fas fa-bars" onclick="openNav()"></button>
+                </div>
+                <!-- Sidebar Toggle Icon-->
+
+
+                <div class="col-6 ">
+
+                </div>
+
+                <div class="col-4 input-group-lg btn d-flex justify-content-end align-top  " id="search">
+                    <!-- Navbar Search-->
+
+                    <input class="" type="search" value="Search for..." />
+                    <span  class="col-1 d-flex rounded-end justify-content-center bg-pink " 
+                        id="inputGroup-sizing-default"><i class="fas fa-search  d-flex align-self-center "></i></span>
+                    <!-- User Profile-->
+
+                    <button class="btn-group btn text-secondary">
+                        <i class="fas fa-user align-self-baseline"></i>
+                        <i class="fas fa-sort-down align-self-baseline "></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+
+    <div class="container-fluid border-primary" id="main">
+        <div id="navDiv">
+            <nav class="bg-purple ">
+
+                <div id="mySidenav" class="sidenav">
+
+
+
+
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#" class=" fas fa-home"> Home</a>
+
+
+                    <a href="index.html" class="fas fa-tshirt"> Products</a>
+                    <a href="/products.html" class="fas fa-table"> Orders</a>
+                    <a href="#" class="fas fa-chart-area"> Reports</a>
+                    <a href="#" class="fas fa-users"> Customers</a>
+
+                </div>
+
+
+
+            </nav>
+        </div>
+
+        <!-- The Main Content -->
+
+        <main class="container-fluid border-primary mb-auto">
+
+            <div>
+                <H2>Products</H2>
+
+            </div>
+            
+            <div>
+                <h6><a href="#">Dashboard</a>
+                /products</h6>
+                <div class="d-flex justify-content-center">
+                <div class="list-group row col-11 align-content-center ">
+                    <a href="#" class="list-group-item list-group-item-action  mb-3  " aria-current="true">
+                        <div class="row">
+                        <img class="col-2" src="file:///D:/NRT/Dashboard-master/img/favicon.ico" width="200" height="150" alt="">
+                        <div class="col-7">
+                            <h3>title </h3>
+                            <h6> ditails</h6>
+                        </div>
+                        <div class="col-3 ">
+                            <h3 class="fw-bold">200 SR</h3>
+                            <h6 style="color: rgb(0, 255, 13);"> free shiping</h6>
+                            <div class="d-flex justify-content-center rounded mb-2 bg-purple" >
+                            <input class="btn   text-light"  type="button" value="Details" />
+                            </div>
+                            <div class="d-flex justify-content-center rounded mb-2 bg-pink" >
+                                <input class="btn  text-light" type="button" value="Delete" width="100%"/>
+                            </div>
+
+                        </div>
+                        </div>
+                        </a>
+
+                      <a href="#" class="list-group-item list-group-item-action  mb-3  rounded border " aria-current="true">
+                        <div class="row">
+                            <img class="col-2" src="file:///D:/NRT/Dashboard-master/img/favicon.ico" width="200" height="150" alt="">
+                            <div class="col-7">
+                            <h3>title </h3>
+                            <h6> ditails</h6>
+                        </div>
+                        <div class="col-3 ">
+                            <h3 class="fw-bold">200 SR</h3>
+                            <h6 style="color: rgb(0, 255, 13);"> free shiping</h6>
+                            <div class="d-flex justify-content-center rounded mb-2 bg-purple" >
+                            <input class="btn   text-light"  type="button" value="Details" />
+                            </div>
+                            <div class="d-flex justify-content-center rounded mb-2 bg-pink" >
+                                <input class="btn  text-light" type="button" value="Delete" width="100%"/>
+                            </div>
+
+                        </div>
+                        </div>
+                        </a>
+                        
+                        <a href="#" class="list-group-item list-group-item-action  mb-3 rounded border  " aria-current="true">
+                            <div class="row">
+                                <img class="col-2" src="file:///D:/NRT/Dashboard-master/img/favicon.ico" width="200" height="150" alt="">
+                                <div class="col-7">
+                                <h3>title </h3>
+                                <h6> ditails</h6>
+                            </div>
+                            <div class="col-3 ">
+                                <h3 class="fw-bold">200 SR</h3>
+                                <h6 style="color: rgb(0, 255, 13);"> free shiping</h6>
+                                <div class="d-flex justify-content-center rounded mb-2 bg-purple" >
+                                <input class="btn   text-light"  type="button" value="Details" />
+                                </div>
+                                <div class="d-flex justify-content-center rounded mb-2 bg-pink" >
+                                    <input class="btn  text-light" type="button" value="Delete" width="100%"/>
+                                </div>
+    
+                            </div>
+                            </div>
+                            </a>
+                            
+                  </div>
+                  </div>
+            </div>
+            </main>
+            </div>
+</body>
+</html>

@@ -25,8 +25,3 @@ Simple responsive front-end dashboard. This dashboard uses the Bootstrap styles 
 - Use map() Js for mapping products array list int card that displays on the Products page.
 - Use Tidio integrations to add chatbot in dashboard website.
 
-
-## Future Features:
-- Add Products Details Page.
-- Make dark mode dashboard.
-- link the chart with API information.

@@ -14,12 +14,7 @@ Simple responsive front-end dashboard. This dashboard uses the Bootstrap styles 
 * [ Datatables](https://datatables.net/ " Chartjs")
 * [Tidio](https://www.tidio.com/ "Tidio")
 
-## Project Prototype
-- Home Page
-<img src="img/screen1.png">
 
-- Products Page
-<img src="img/screen2.jpg">
 
 
 
